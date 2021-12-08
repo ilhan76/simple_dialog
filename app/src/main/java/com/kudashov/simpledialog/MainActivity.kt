@@ -11,13 +11,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         findViewById<Button>(R.id.button).setOnClickListener {
-            SimpleDialog
-                .newInstance(
-                    bundleOf(
-                        SimpleDialog.MESSAGE_ID to "Привет"
-                    )
+            SimpleAlertDialog.newInstance(
+                bundleOf(
+                    SimpleAlertDialog.MESSAGE_ID to "Привет"
                 )
-                .show(supportFragmentManager, "BaseFragment")
+            ).show(supportFragmentManager, "TAG")
         }
     }
 }
